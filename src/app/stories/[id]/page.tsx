@@ -49,7 +49,14 @@ const STORIES = [
   },
 ]
 
-export default function StoryPage({ params }: { params: { id: string } }) {
+interface StoryPageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function StoryPage({ params, searchParams }: StoryPageProps) {
   const story = STORIES.find(s => s.id === parseInt(params.id))
   
   if (!story) {

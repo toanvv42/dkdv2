@@ -72,7 +72,14 @@ const BLOG_POSTS = [
   },
 ]
 
-export default function BlogPost({ params }: { params: { id: string } }) {
+interface BlogPostPageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function BlogPost({ params, searchParams }: BlogPostPageProps) {
   const post = BLOG_POSTS.find(p => p.id === parseInt(params.id))
   
   if (!post) {
