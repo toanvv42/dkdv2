@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-  basePath: '/dkdv2', // Replace with your repository name
+  basePath: '/dkdv2', // Matches your repository name: toanvv42/dkdv2
 }
 
 module.exports = nextConfig 
