@@ -55,7 +55,7 @@ export default function Home() {
       <section className="bg-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Share Your Miracle Story</h2>
-          <p className="text-xl mb-8">Have an inspiring story to share? We'd love to hear from you.</p>
+          <p className="text-xl mb-8">Have an inspiring story to share? We&apos;d love to hear from you.</p>
           <Link 
             href="/submit-story" 
             className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition"

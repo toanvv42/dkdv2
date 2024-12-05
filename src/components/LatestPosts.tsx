@@ -6,7 +6,7 @@ const LATEST_POSTS = [
   {
     id: 1,
     title: "Finding Faith in Difficult Times",
-    excerpt: "A collection of stories about maintaining faith during life's biggest challenges.",
+    excerpt: "A collection of stories about maintaining faith during life&apos;s biggest challenges.",
     author: "Sarah Johnson",
     date: "2024-01-15",
     thumbnail: "https://placehold.co/800x450/purple/white?text=Finding+Faith",
