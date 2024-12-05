@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Metadata } from 'next'
 
 // This would typically come from your database or CMS
 const BLOG_POSTS = [
@@ -73,11 +72,11 @@ const BLOG_POSTS = [
   },
 ]
 
-type Props = {
+export default async function BlogPost({
+  params,
+}: {
   params: { id: string }
-}
-
-export default function BlogPost({ params }: Props) {
+}) {
   const post = BLOG_POSTS.find(p => p.id === parseInt(params.id))
   
   if (!post) {
