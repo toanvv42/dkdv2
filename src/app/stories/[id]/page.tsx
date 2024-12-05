@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 
 // This would typically come from your database or CMS
 const STORIES = [
@@ -49,14 +50,11 @@ const STORIES = [
   },
 ]
 
-interface StoryPageProps {
-  params: {
-    id: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
+type Props = {
+  params: { id: string }
 }
 
-export default function StoryPage({ params, searchParams }: StoryPageProps) {
+export default function StoryPage({ params }: Props) {
   const story = STORIES.find(s => s.id === parseInt(params.id))
   
   if (!story) {
